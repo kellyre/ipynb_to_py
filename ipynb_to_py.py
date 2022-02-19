@@ -7,6 +7,10 @@ from os.path import exists, join
 import sys
 
 def extract_code(folder, overwrite, recurse, suffix):
+'''Read in ipynb files from a directory or a directory tree.
+For each file, read just the code portions of the files and
+write them back to new ".py" files. Without the overwrite flag
+'''
     glob_string = join(folder, "*.ipynb")
     if recurse:
         glob_string = join(folder, "**", "*.ipynb")
